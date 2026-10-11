@@ -1,0 +1,364 @@
+
+/* --------------------------------------------------
+   General Page Settings
+-------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* --------------------------------------------------
+   Main Container
+-------------------------------------------------- */
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* --------------------------------------------------
+   Headings
+-------------------------------------------------- */
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-top: 25px;
+}
+
+
+/* --------------------------------------------------
+   Form
+-------------------------------------------------- */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+
+/* --------------------------------------------------
+   Buttons
+-------------------------------------------------- */
+
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.main-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* --------------------------------------------------
+   Links
+-------------------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+.auth-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* --------------------------------------------------
+   Error Messages
+-------------------------------------------------- */
+
+.error {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+/* --------------------------------------------------
+   Todo Header
+-------------------------------------------------- */
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.todo-header h1 {
+    margin: 0;
+}
+
+
+/* --------------------------------------------------
+   Todo Item
+-------------------------------------------------- */
+
+.todo-item {
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.todo-title {
+    font-size: 17px;
+    margin-bottom: 12px;
+    word-break: break-word;
+}
+
+
+/* --------------------------------------------------
+   Todo Actions
+-------------------------------------------------- */
+
+.todo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.todo-actions form {
+    margin: 0;
+}
+
+.edit-form {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.edit-form input {
+    flex: 1;
+}
+
+
+/* --------------------------------------------------
+   Empty State
+-------------------------------------------------- */
+
+.empty-state {
+    text-align: center;
+    padding: 25px;
+    border: 1px dashed #bbb;
+    border-radius: 8px;
+}
+
+
+/* --------------------------------------------------
+   Mobile Responsive
+-------------------------------------------------- */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 15px auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .todo-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .todo-header h1 {
+        text-align: center;
+    }
+
+    .edit-form {
+        flex-direction: column;
+    }
+
+    .edit-form button {
+        width: 100%;
+    }
+
+    .todo-actions {
+        flex-direction: column;
+    }
+
+    .todo-actions button {
+        width: 100%;
+    }
+
+    input {
+        font-size: 16px;
+    }
+}
+/* --------------------------------------------------
+   Validation Error Messages
+-------------------------------------------------- */
+
+.error {
+    color: #d93025;
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Server-side flash messages */
+p[role="alert"] {
+    color: #b42318;
+    background-color: #fef3f2;
+    border: 1px solid #fecdca;
+    border-radius: 7px;
+    padding: 10px 12px;
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Keep error messages visible on small screens */
+@media (max-width: 500px) {
+    .error,
+    p[role="alert"] {
+        font-size: 13px;
+    }
+}
+
+/* =================================
+   Dark Mode
+================================= */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: #ffffff;
+    border: 1px solid #666;
+}
+
+body.dark-mode a {
+    color: #90caf9;
+}
+
+body.dark-mode hr {
+    border-color: #555;
+}
+
+body.dark-mode .task,
+body.dark-mode .todo-item {
+    background-color: #252525;
+    color: #f1f1f1;
+    border-color: #444;
+}
+
+.theme-toggle {
+    padding: 10px 14px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* Header buttons layout */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.header-actions a {
+    padding: 10px 14px;
+    border-radius: 7px;
+    background-color: #eee;
+    color: #222;
+}
+
+.theme-toggle {
+    margin-bottom: 0;
+}
+
+/* Dark mode link styling */
+body.dark-mode .header-actions a {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Mobile layout */
+@media (max-width: 500px) {
+    .header-actions {
+        justify-content: center;
+    }
+}
